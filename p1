@@ -1,0 +1,51 @@
+print("---Menu---");
+print("1.Number right traingle");
+print("2.Sequentail number right traingle");
+print("3.Pascal traingle");
+print("Select the pattern...:");
+let n=Int(readLine()!);
+switch n
+{
+  case 1:
+    let i,j,n:Int;
+    for i in 0..<5
+    {
+      for j in 0...i
+      {
+        print(" ",j+1,terminator:" ");
+      }
+      print("\n");
+    }
+  case 2:
+    let i,j,n:Int;
+    var c=1;
+    for i in 0..<5
+    {
+      for j in 0...i
+      {
+        print(" ",c,terminator:" ");
+        c=c+1;
+      }
+      print("\n");
+    }
+  case 3:
+    let i,j:Int;
+    var coef=1;
+    for i in 0..<5
+    {
+      for j in 0...i{
+        if(j==0 || i==0)
+        {
+          coef=1;
+        }
+        else
+        {
+          coef=coef*(i-j+1)/j;
+        }
+      print(" ",coef,terminator:" ");
+      }
+      print("\n");
+  }
+  default:
+    print("You select wrong number... ");
+}
